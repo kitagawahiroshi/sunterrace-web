@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,19 +20,23 @@
         /* Centered Logo Container */
         .centered-logo-container {
             text-align: center;
-            padding: 0px 0; /* Reduced padding */
-            margin-top: 0px; /* Reduced margin */
+            padding: 0px 0;
+            /* Reduced padding */
+            margin-top: 0px;
+            /* Reduced margin */
         }
 
         .centered-logo-container .logo-link {
-            display: inline-block; /* Allows margin auto to work for centering */
+            display: inline-block;
+            /* Allows margin auto to work for centering */
             text-decoration: none;
         }
 
         .centered-logo-container .logo-container {
             display: flex;
             align-items: center;
-            justify-content: center; /* Center items within the flex container */
+            justify-content: center;
+            /* Center items within the flex container */
         }
 
         .centered-logo-container .header-favicon {
@@ -53,13 +58,15 @@
         }
 
         .instagram-link img {
-            width: 60px; /* A more appropriate size for inline content */
+            width: 60px;
+            /* A more appropriate size for inline content */
             height: auto;
         }
 
         /* Hero Section */
         .hero-section {
-            height: 100vh; /* Full viewport height */
+            height: 100vh;
+            /* Full viewport height */
             background-image: url('images/main_background.JPG');
             background-size: cover;
             background-position: center center;
@@ -67,10 +74,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #000000; /* Black color for better visibility */
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /* Lighter text shadow */
+            color: #000000;
+            /* Black color for better visibility */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+            /* Lighter text shadow */
             flex-direction: column;
-            padding-top: 0; /* No fixed header, so no padding needed */
+            padding-top: 0;
+            /* No fixed header, so no padding needed */
             box-sizing: border-box;
         }
 
@@ -80,30 +90,43 @@
         }
 
         .hero-section p {
-            font-size: 2.2em; /* Increased font size for better visibility */
-            font-family: "BIZ UMincho", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif; /* Mincho font */
-            font-weight: bold; /* Make text bold */
-            color: white; /* Keep text white */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Slightly stronger text shadow */
+            font-size: 2.2em;
+            /* Increased font size for better visibility */
+            font-family: "BIZ UMincho", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+            /* Mincho font */
+            font-weight: bold;
+            /* Make text bold */
+            color: white;
+            /* Keep text white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            /* Slightly stronger text shadow */
         }
 
         /* Main Navigation */
         .main-nav {
             display: flex;
-            justify-content: center; /* Center the navigation links */
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-            padding: 8px 0; /* Reduced padding */
-            /* box-shadow: none; */ /* Removed box-shadow to remove the line */
+            justify-content: center;
+            /* Center the navigation links */
+            background-color: rgba(255, 255, 255, 0.9);
+            /* Semi-transparent white background */
+            padding: 8px 0;
+            /* Reduced padding */
+            /* box-shadow: none; */
+            /* Removed box-shadow to remove the line */
             z-index: 90;
         }
 
         .main-nav a {
             color: #333;
             text-decoration: none;
-            padding: 8px 15px; /* Slightly smaller padding */
-            margin: 0 8px; /* Slightly smaller margin */
-            font-weight: normal; /* Removed bold */
-            font-size: 0.9em; /* Slightly smaller font size */
+            padding: 8px 15px;
+            /* Slightly smaller padding */
+            margin: 0 8px;
+            /* Slightly smaller margin */
+            font-weight: normal;
+            /* Removed bold */
+            font-size: 0.9em;
+            /* Slightly smaller font size */
             transition: color 0.3s ease;
         }
 
@@ -131,8 +154,10 @@
             border-bottom: none;
         }
 
-        .main-content h2, .main-content h3 {
-            color: #333; /* Match navigation link color */
+        .main-content h2,
+        .main-content h3 {
+            color: #333;
+            /* Match navigation link color */
             text-align: center;
         }
 
@@ -142,8 +167,10 @@
         }
 
         footer {
-            background-color: rgba(255, 255, 255, 0.85); /* White, semi-transparent background */
-            color: #333; /* Dark text color */
+            background-color: rgba(255, 255, 255, 0.85);
+            /* White, semi-transparent background */
+            color: #333;
+            /* Dark text color */
             text-align: center;
             padding: 20px;
             margin-top: auto;
@@ -170,13 +197,15 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between icons */
+            gap: 20px;
+            /* Space between icons */
             margin-top: 20px;
             margin-bottom: 20px;
         }
 
         .social-icon-link img {
-            width: 52px; /* Adjust size as needed */
+            width: 52px;
+            /* Adjust size as needed */
             height: auto;
         }
 
@@ -201,7 +230,27 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "サンテラス商会",
+          "url": "https://sunterrace.co/",
+          "logo": "https://sunterrace.co/images/sunterrace_logo.png"
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "サンテラス商会",
+          "url": "https://sunterrace.co/",
+          "image": "https://sunterrace.co/images/main_background.JPG"
+        }
+      ]
+    }
+    </script>
 </head>
+
 <body>
     <div class="centered-logo-container">
         <a href="#" class="logo-link">
@@ -227,7 +276,8 @@
         <section id="profile">
             <h2>Sunterrace & Co.</h2>
             <h3>サンテラス商会について</h3>
-            <p>サンテラス商会は、コミュニティとの共鳴から新たな価値を創造することを追求しています。お客様、パートナー、そして地域社会とのつながりを何よりも大切にし、例えば、時を重ねたこのヴィンテージコンドミニアムに息づくコミュニティとの相互作用の中から、常識にとらわれない発想で、暮らしに新しい豊かさをもたらすプロジェクトを多角的に展開していきます。</p>
+            <p>サンテラス商会は、コミュニティとの共鳴から新たな価値を創造することを追求しています。お客様、パートナー、そして地域社会とのつながりを何よりも大切にし、例えば、時を重ねたこのヴィンテージコンドミニアムに息づくコミュニティとの相互作用の中から、常識にとらわれない発想で、暮らしに新しい豊かさをもたらすプロジェクトを多角的に展開していきます。
+            </p>
             <div class="social-links">
                 <a href="https://www.instagram.com/sunterrace.co/" target="_blank" class="social-icon-link">
                     <img src="images/instagram_icon.png" alt="Instagram">
@@ -240,16 +290,19 @@
 
         <section id="projects">
             <h2>Projects</h2>
-            
+
 
             <h3>Sunterrace.supply</h3>
-            <p>サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。</p>
+            <p>サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。
+            </p>
 
             <h3>Sunterrace.ai</h3>
-            <p>AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。</p>
+            <p>AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。
+            </p>
 
             <h3>Sunterrace.btc</h3>
-            <p>ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。</p>
+            <p>ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。
+            </p>
         </section>
 
         <section id="contact">
@@ -270,7 +323,7 @@
     <a href="#" id="back-to-top">↑</a>
 
     <script>
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             var backToTopButton = document.getElementById('back-to-top');
             if (window.pageYOffset > 300) {
                 backToTopButton.style.display = 'block';
@@ -280,4 +333,5 @@
         });
     </script>
 </body>
+
 </html>
