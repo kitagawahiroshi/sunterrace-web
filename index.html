@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンテラス商会 Sunterrace & Co.</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Centered Logo Container */
+        .centered-logo-container {
+            text-align: center;
+            padding: 0px 0; /* Reduced padding */
+            margin-top: 0px; /* Reduced margin */
+        }
+
+        .centered-logo-container .logo-link {
+            display: inline-block; /* Allows margin auto to work for centering */
+            text-decoration: none;
+        }
+
+        .centered-logo-container .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center items within the flex container */
+        }
+
+        .centered-logo-container .header-favicon {
+            width: 96px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .centered-logo-container .main-logo {
+            width: 256px;
+            height: auto;
+        }
+
+        .instagram-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .instagram-link img {
+            width: 60px; /* A more appropriate size for inline content */
+            height: auto;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh; /* Full viewport height */
+            background-image: url('images/main_background.JPG');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000; /* Black color for better visibility */
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /* Lighter text shadow */
+            flex-direction: column;
+            padding-top: 0; /* No fixed header, so no padding needed */
+            box-sizing: border-box;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 2.2em; /* Increased font size for better visibility */
+            font-family: "BIZ UMincho", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif; /* Mincho font */
+            font-weight: bold; /* Make text bold */
+            color: white; /* Keep text white */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Slightly stronger text shadow */
+        }
+
+        /* Main Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: center; /* Center the navigation links */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 8px 0; /* Reduced padding */
+            /* box-shadow: none; */ /* Removed box-shadow to remove the line */
+            z-index: 90;
+        }
+
+        .main-nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px 15px; /* Slightly smaller padding */
+            margin: 0 8px; /* Slightly smaller margin */
+            font-weight: normal; /* Removed bold */
+            font-size: 0.9em; /* Slightly smaller font size */
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #0056b3;
+        }
+
+        /* Main content styles */
+        .main-content {
+            flex-grow: 1;
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .main-content h2, .main-content h3 {
+            color: #333; /* Match navigation link color */
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.85); /* White, semi-transparent background */
+            color: #333; /* Dark text color */
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            z-index: 90;
+        }
+
+        footer .footer-nav {
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .footer-nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 0 10px;
+            font-size: 0.9em;
+        }
+
+        footer .footer-nav a:hover {
+            color: #0056b3;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between icons */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon-link img {
+            width: 52px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        #back-to-top:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-logo-container">
+        <a href="#" class="logo-link">
+            <div class="logo-container">
+                <img src="images/favicon.png" alt="Favicon" class="header-favicon">
+                <img src="images/sunterrace_logo.png" alt="Sunterrace Logo" class="main-logo">
+            </div>
+        </a>
+    </div>
+
+    <nav class="main-nav">
+        <a href="#profile">Sunterrace & Co.</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero-section">
+        <h1></h1>
+        <p>コミュニティと共鳴し、新たな価値を創造する。</p>
+    </div>
+
+    <div class="main-content">
+        <section id="profile">
+            <h2>Sunterrace & Co.</h2>
+            <h3>サンテラス商会について</h3>
+            <p>サンテラス商会は、コミュニティとの共鳴から新たな価値を創造することを追求しています。お客様、パートナー、そして地域社会とのつながりを何よりも大切にし、例えば、時を重ねたこのヴィンテージコンドミニアムに息づくコミュニティとの相互作用の中から、常識にとらわれない発想で、暮らしに新しい豊かさをもたらすプロジェクトを多角的に展開していきます。</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/sunterrace.co/" target="_blank" class="social-icon-link">
+                    <img src="images/instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@sunterraceandco" target="_blank" class="social-icon-link">
+                    <img src="images/youtube_icon.png" alt="YouTube">
+                </a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            
+
+            <h3>Sunterrace.supply</h3>
+            <p>サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。</p>
+
+            <h3>Sunterrace.ai</h3>
+            <p>AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。</p>
+
+            <h3>Sunterrace.btc</h3>
+            <p>ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>お問い合わせは info@sunterrace.co までご連絡ください。</p>
+        </section>
+    </div>
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="#profile">Sunterrace & Co.</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <p>©︎ 2025 Sunterrace & Co.</p>
+    </footer>
+
+    <a href="#" id="back-to-top">↑</a>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
