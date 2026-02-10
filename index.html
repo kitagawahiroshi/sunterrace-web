@@ -233,33 +233,40 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "name": "サンテラス商会",
-          "url": "https://sunterrace.co/",
-          "logo": "https://sunterrace.co/images/sunterrace_logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "info@sunterrace.co",
-            "contactType": "customer support"
-          }
-        },
-        {
-          "@type": "LocalBusiness",
-          "name": "サンテラス商会",
-          "url": "https://sunterrace.co/",
-          "image": "https://sunterrace.co/images/main_background.JPG",
-          "description": "サンテラス商会は、コミュニティとの共鳴から新たな価値を創造することを追求しています。",
-          "email": "info@sunterrace.co",
-          "priceRange": "￥￥",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Fukuoka",
-            "addressCountry": "JP"
-          }
-        }
-      ]
+      "@type": "LocalBusiness",
+      "name": "株式会社サンテラス",
+      "image": [
+        "https://sunterrace.co/images/ogp.jpg"
+      ],
+      "@id": "https://sunterrace.co",
+      "url": "https://sunterrace.co",
+      "telephone": "+81-92-000-0000",
+      "priceRange": "要相談",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "（実際の住所があればここに記述、なければ区町村まで）",
+        "addressLocality": "福岡市",
+        "addressRegion": "福岡県",
+        "postalCode": "810-0000",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.590184,
+        "longitude": 130.401728
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
     }
     </script>
 </head>
