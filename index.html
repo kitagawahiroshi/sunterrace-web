@@ -241,22 +241,50 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .btn-contact {
+        /* ボタンのスタイル */
+        .contact-button {
             display: inline-block;
-            padding: 15px 40px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
+            background-color: #1a1a1a;
+            /* ほぼ黒の上品な色 */
+            color: #ffffff !important;
+            text-decoration: none !important;
+            padding: 18px 60px;
             border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* 丸みのあるピル型 */
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* 浮いているような影 */
         }
 
-        .btn-contact:hover {
-            background-color: #555;
+        /* ホバー時の動き */
+        .contact-button:hover {
+            background-color: #333333;
             transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            /* 少し持ち上がる */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 矢印のデザイン */
+        .contact-button .arrow {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        /* スマホでの調整 */
+        @media (max-width: 768px) {
+            .contact-button {
+                width: 80%;
+                /* スマホでは幅広に */
+                padding: 15px 0;
+            }
+
+            .sp-only {
+                display: block;
+                /* スマホのみ改行 */
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -350,14 +378,17 @@
         </section>
 
         <section id="contact">
-            <div class="container" style="text-align: center; padding: 60px 20px;">
-                <h2 class="section-title">Contact</h2>
-                <p class="section-subtitle">お仕事のご依頼・ご相談など、お気軽にお問い合わせください。</p>
+            <div class="container" style="text-align: center; padding: 80px 20px;">
+                <h2 class="section-title" style="margin-bottom: 10px;">Contact</h2>
+                <p class="section-subtitle" style="margin-bottom: 40px; color: #666;">
+                    お仕事のご依頼・ご相談など、<br class="sp-only">お気軽にお問い合わせください。
+                </p>
 
-                <div style="margin-top: 40px;">
+                <div class="contact-btn-wrapper">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUPrHYC-hzxf1hM1npHCHpmMY9sBotEhtqfejAuUpQAEqang/viewform"
-                        target="_blank" class="btn-contact">
-                        お問い合わせフォームへ移動する
+                        target="_blank" class="contact-button">
+                        お問い合わせフォームを開く
+                        <span class="arrow">→</span>
                     </a>
                 </div>
             </div>
