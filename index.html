@@ -241,49 +241,42 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        /* ボタンのスタイル */
         .contact-button {
             display: inline-block;
-            background-color: #1a1a1a;
-            /* ほぼ黒の上品な色 */
+            background-color: #444444;
+            /* アイコンに合わせたダークグレー */
             color: #ffffff !important;
             text-decoration: none !important;
-            padding: 18px 60px;
-            border-radius: 50px;
-            /* 丸みのあるピル型 */
-            font-size: 16px;
+            padding: 16px 50px;
+            border-radius: 4px;
+            /* アイコンの線に合わせて少し角を残す */
+            font-size: 15px;
             font-weight: 500;
             letter-spacing: 0.05em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            /* 浮いているような影 */
+            border: 1px solid #444444;
         }
 
-        /* ホバー時の動き */
+        /* ホバー時は白抜きにして、軽やかさを出す */
         .contact-button:hover {
-            background-color: #333333;
+            background-color: transparent;
+            color: #444444 !important;
+            border: 1px solid #444444;
             transform: translateY(-2px);
-            /* 少し持ち上がる */
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* 矢印のデザイン */
         .contact-button .arrow {
-            margin-left: 10px;
-            font-weight: bold;
+            margin-left: 8px;
         }
 
-        /* スマホでの調整 */
         @media (max-width: 768px) {
             .contact-button {
                 width: 80%;
-                /* スマホでは幅広に */
                 padding: 15px 0;
             }
 
             .sp-only {
                 display: block;
-                /* スマホのみ改行 */
             }
         }
     </style>
@@ -387,7 +380,7 @@
                 <div class="contact-btn-wrapper">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUPrHYC-hzxf1hM1npHCHpmMY9sBotEhtqfejAuUpQAEqang/viewform"
                         target="_blank" class="contact-button">
-                        お問い合わせフォームを開く
+                        お問い合わせフォームへ
                         <span class="arrow">→</span>
                     </a>
                 </div>
