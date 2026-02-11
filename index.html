@@ -241,38 +241,68 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .contact-button {
-            display: inline-block;
+        /* 共通のボタンスタイル */
+        .common-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             background-color: #444444;
-            /* アイコンに合わせたダークグレー */
+            /* 統一されたダークグレー */
             color: #ffffff !important;
             text-decoration: none !important;
-            padding: 16px 50px;
             border-radius: 4px;
-            /* アイコンの線に合わせて少し角を残す */
             font-size: 15px;
             font-weight: 500;
             letter-spacing: 0.05em;
             transition: all 0.3s ease;
             border: 1px solid #444444;
+            cursor: pointer;
         }
 
-        /* ホバー時は白抜きにして、軽やかさを出す */
-        .contact-button:hover {
+        /* ホバー時の共通動作 */
+        .common-btn:hover {
             background-color: transparent;
             color: #444444 !important;
-            border: 1px solid #444444;
             transform: translateY(-2px);
         }
 
-        .contact-button .arrow {
+        /* お問い合わせボタン（メイン） */
+        .main-btn {
+            padding: 16px 50px;
+            min-width: 260px;
+        }
+
+        .main-btn .arrow {
             margin-left: 8px;
         }
 
+        /* SNSボタン（サブ） */
+        .social-btn {
+            padding: 12px 30px;
+            font-size: 14px;
+            min-width: 140px;
+            background-color: #666666;
+            /* 少し明るめにして階層をつける */
+            border-color: #666666;
+        }
+
+        /* SNSボタンのホバー */
+        .social-btn:hover {
+            color: #666666 !important;
+        }
+
+        /* スマホ対応 */
         @media (max-width: 768px) {
-            .contact-button {
-                width: 80%;
-                padding: 15px 0;
+            .common-btn {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .social-links-wrapper {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
             }
 
             .sp-only {
@@ -377,11 +407,22 @@
                     お仕事のご依頼・ご相談など、<br class="sp-only">お気軽にお問い合わせください。
                 </p>
 
-                <div class="contact-btn-wrapper">
+                <div class="contact-btn-wrapper" style="margin-bottom: 30px;">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUPrHYC-hzxf1hM1npHCHpmMY9sBotEhtqfejAuUpQAEqang/viewform"
-                        target="_blank" class="contact-button">
+                        target="_blank" class="common-btn main-btn">
                         お問い合わせフォームへ
                         <span class="arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="social-links-wrapper"
+                    style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://www.instagram.com/sunterrace.co/" target="_blank" class="common-btn social-btn">
+                        Instagram
+                    </a>
+
+                    <a href="https://www.youtube.com/@sunterraceandco" target="_blank" class="common-btn social-btn">
+                        YouTube
                     </a>
                 </div>
             </div>
