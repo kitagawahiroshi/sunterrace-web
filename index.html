@@ -396,11 +396,11 @@
         <section id="contact">
             <div class="container" style="text-align: center; padding: 80px 20px;">
                 <h2 class="section-title" style="margin-bottom: 10px;">Contact</h2>
-                <p class="section-subtitle" style="margin-bottom: 40px; color: #444;">
+                <p class="section-subtitle" style="margin-bottom: 40px; color: #666;">
                     お仕事のご依頼・ご相談など、<br class="sp-only">お気軽にお問い合わせください。
                 </p>
 
-                <div class="contact-btn-wrapper" style="margin-bottom: 30px;">
+                <div class="contact-btn-wrapper" style="margin-bottom: 20px;">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUPrHYC-hzxf1hM1npHCHpmMY9sBotEhtqfejAuUpQAEqang/viewform"
                         target="_blank" class="common-btn main-btn">
                         お問い合わせフォームへ
@@ -411,14 +411,97 @@
                 <div class="social-links-wrapper"
                     style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                     <a href="https://www.instagram.com/sunterrace.co/" target="_blank" class="common-btn social-btn">
-                        Instagram
+                        <span class="icon">Instagram</span>
                     </a>
 
                     <a href="https://www.youtube.com/@sunterraceandco" target="_blank" class="common-btn social-btn">
-                        YouTube
+                        <span class="icon">YouTube</span>
                     </a>
                 </div>
             </div>
+
+            <style>
+                /* 共通のボタンスタイル */
+                .common-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #444444;
+                    /* 統一されたダークグレー */
+                    color: #ffffff !important;
+                    text-decoration: none !important;
+                    border-radius: 4px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    letter-spacing: 0.05em;
+                    transition: all 0.3s ease;
+                    border: 1px solid #444444;
+                    cursor: pointer;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }
+
+                /* ホバー時の共通動作 */
+                .common-btn:hover {
+                    background-color: transparent;
+                    color: #444444 !important;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+
+                /* 上段：メインボタン */
+                .main-btn {
+                    padding: 18px 40px;
+                    width: 100%;
+                    max-width: 400px;
+                    /* PCでの最大幅 */
+                }
+
+                .main-btn .arrow {
+                    margin-left: 10px;
+                    font-weight: bold;
+                }
+
+                /* 下段：SNSボタン */
+                .social-btn {
+                    padding: 12px 20px;
+                    width: 190px;
+                    /* 2つ並べた時にちょうど良い幅 */
+                    font-size: 14px;
+                    background-color: #666666;
+                    /* 少し明るめにして階層をつける */
+                    border-color: #666666;
+                }
+
+                /* SNSボタンのホバー色調整 */
+                .social-btn:hover {
+                    color: #666666 !important;
+                }
+
+                /* スマホ対応 */
+                @media (max-width: 480px) {
+                    .main-btn {
+                        width: 100%;
+                    }
+
+                    .social-links-wrapper {
+                        flex-direction: row;
+                        gap: 10px;
+                    }
+
+                    /* スマホでも横並び維持 */
+                    .social-btn {
+                        flex: 1;
+                        width: auto;
+                        padding: 12px 5px;
+                        font-size: 13px;
+                    }
+
+                    /* 幅を均等に */
+                    .sp-only {
+                        display: block;
+                    }
+                }
+            </style>
         </section>
     </div>
 
