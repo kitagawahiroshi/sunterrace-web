@@ -23,6 +23,8 @@
             font-family: sans-serif;
             color: #333;
             min-height: 100vh;
+            overflow-x: hidden;
+            width: 100%;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -76,8 +78,10 @@
 
         /* Hero Section */
         .hero-section {
-            height: 100vh;
-            /* Full viewport height */
+            min-height: 100vh;
+            /* Fallback */
+            min-height: 100svh;
+            /* Stable mobile height */
             background-image: url('images/main_background.JPG');
             background-size: cover;
             background-position: center center;
@@ -308,6 +312,49 @@
             .sp-only {
                 display: block;
             }
+
+            /* Mobile Layout Fixes */
+            .main-nav {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .main-nav a {
+                padding: 6px 6px;
+                margin: 0 4px;
+                font-size: 0.85rem;
+            }
+
+            .centered-logo-container .logo-container {
+                padding: 0 10px;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            .centered-logo-container .header-favicon {
+                width: 60px;
+                /* Smaller favicon for mobile */
+                height: auto;
+            }
+
+            .centered-logo-container .main-logo {
+                width: 200px;
+                /* Smaller logo for mobile */
+                height: auto;
+                max-width: 100%;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1.3rem;
+                /* Adjusted for better readability on mobile */
+                padding: 0 20px;
+                word-wrap: break-word;
+                /* Ensure long words don't overflow */
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -438,6 +485,7 @@
                     border: 1px solid #444444;
                     cursor: pointer;
                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    box-sizing: border-box;
                 }
 
                 /* ホバー時の共通動作 */
@@ -481,6 +529,7 @@
                 @media (max-width: 480px) {
                     .main-btn {
                         width: 100%;
+                        padding: 18px 20px;
                     }
 
                     .social-links-wrapper {
