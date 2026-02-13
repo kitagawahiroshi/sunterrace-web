@@ -328,8 +328,8 @@ footer .footer-nav a:hover {
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color);
-    color: #ffffff !important;
-    text-decoration: none !important;
+    color: #ffffff;
+    text-decoration: none;
     border-radius: 0;
     font-size: 15px;
     font-weight: 500;
@@ -344,7 +344,7 @@ footer .footer-nav a:hover {
 /* ホバー時の共通動作 */
 .common-btn:hover {
     background-color: transparent;
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
     transform: translateY(0);
     box-shadow: none;
 }
@@ -452,14 +452,14 @@ footer .footer-nav a:hover {
 
 /* 下段：SNSボタンの親要素 */
 .social-links-wrapper {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: clamp(24px, 6vw, 60px) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(24px, 6vw, 60px);
     /* アイコン同士の間隔を画面幅に合わせて可変（最小24px〜最大60px） */
-    margin-top: 30px !important;
-    padding: 0 !important;
-    flex-wrap: nowrap !important;
+    margin-top: 30px;
+    padding: 0;
+    flex-wrap: nowrap;
     /* 勝手に折り返さないようにする */
 }
 
@@ -471,20 +471,20 @@ footer .footer-nav a:hover {
     width: 44px;
     /* スマホで指で押しやすい最小サイズを確保 */
     height: 44px;
-    min-width: 0 !important;
-    color: #333333 !important;
+    min-width: 0;
+    color: #333333;
     /* Sunterrace Standardの墨色 */
-    font-size: 22px !important;
+    font-size: 22px;
     /* アイコンの大きさを統一 */
-    text-decoration: none !important;
+    text-decoration: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0.7;
     /* 通常時は少しだけ色を落として控えめに */
-    background: transparent !important;
+    background: transparent;
     /* 以前のボタン背景を完全に消去 */
-    border: none !important;
+    border: none;
     /* 以前のボタン枠線を完全に消去 */
-    box-shadow: none !important;
+    box-shadow: none;
     flex: none;
     padding: 0;
 }
@@ -501,8 +501,8 @@ footer .footer-nav a:hover {
     /* マウスを乗せるとくっきり黒になる */
     transform: translateY(-3px);
     /* ほんの少しだけ上にフワッと浮く */
-    background-color: transparent !important;
-    color: #333333 !important;
+    background-color: transparent;
+    color: #333333;
 }
 
 /* スマホ対応 */
@@ -510,21 +510,21 @@ footer .footer-nav a:hover {
 
     /* ヘッダー全体の上下余白を最小限にする */
     header {
-        padding: 10px 0 !important;
+        padding: 10px 0;
     }
 
     /* ロゴ画像をコンパクトにする */
     .centered-logo-container .header-favicon,
     .centered-logo-container .main-logo {
-        max-height: 40px !important;
+        max-height: 40px;
         width: auto;
-        margin-bottom: 5px !important;
+        margin-bottom: 5px;
     }
 
     /* ナビゲーションリンクを横一列に並べ、文字を小さくする */
     .main-nav {
-        display: flex !important;
-        flex-direction: row !important;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         gap: 15px;
         /* リンク同士の隙間を適度に詰める */
@@ -533,7 +533,7 @@ footer .footer-nav a:hover {
     }
 
     .main-nav a {
-        font-size: 13px !important;
+        font-size: 13px;
         /* スマホ用に文字サイズを調整 */
         padding: 5px 0;
         margin: 0;
@@ -575,9 +575,9 @@ footer .footer-nav a:hover {
 
     /* social-btn override for mobile (prevent full width) */
     .social-btn {
-        width: 44px !important;
-        max-width: none !important;
-        margin: 0 !important;
-        flex: none !important;
+        width: 44px;
+        max-width: none;
+        margin: 0;
+        flex: none;
     }
 }
