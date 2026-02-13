@@ -444,25 +444,88 @@
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <div class="container" style="text-align: center; padding: 80px 20px; max-width: 1000px; margin: 0 auto;">
+                <h2 class="section-title" style="margin-bottom: 50px;">Projects</h2>
 
-            <div class="project-card">
-                <h3>Sunterrace.supply</h3>
-                <p>サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。
-                </p>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3 class="project-name">Sunterrace.supply</h3>
+                        <p class="project-desc">
+                            サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。
+                        </p>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-name">Sunterrace.ai</h3>
+                        <p class="project-desc">
+                            AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。
+                        </p>
+                    </div>
+
+                    <div class="project-card">
+                        <h3 class="project-name">Sunterrace.btc</h3>
+                        <p class="project-desc">
+                            ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-card">
-                <h3>Sunterrace.ai</h3>
-                <p>AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。
-                </p>
-            </div>
+            <style>
+                /* グリッドレイアウト（PCでは3列、スマホでは1列に自動調整） */
+                .projects-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 30px;
+                }
 
-            <div class="project-card">
-                <h3>Sunterrace.btc</h3>
-                <p>ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。
-                </p>
-            </div>
+                /* ミニマル・カードデザイン（JSON定義を反映） */
+                .project-card {
+                    background-color: #F9F9F9;
+                    /* bgCard */
+                    border: 1px solid #E5E5E5;
+                    /* line */
+                    border-radius: 0px;
+                    /* radius: 0px */
+                    box-shadow: none;
+                    /* shadow: none */
+                    padding: 40px 30px;
+                    text-align: left;
+                    /* 長文が読みやすいように左揃え */
+                    transition: border-color 0.3s ease;
+                    margin-bottom: 0;
+                    /* Reset previous margin */
+                }
+
+                /* ホバー時に枠線だけ少し濃くする上品な演出 */
+                .project-card:hover {
+                    border-color: #333333;
+                }
+
+                /* プロジェクト名（見出し） */
+                .project-name {
+                    font-family: "Inter", sans-serif;
+                    color: #333333;
+                    /* textMain */
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    border-bottom: 2px solid #333333;
+                    display: inline-block;
+                    padding-bottom: 8px;
+                    letter-spacing: 0.02em;
+                }
+
+                /* プロジェクト説明文 */
+                .project-desc {
+                    color: #333333;
+                    /* textMain */
+                    font-size: 14px;
+                    line-height: 1.8;
+                    /* 行間を広げて読みやすく */
+                    letter-spacing: 0.03em;
+                }
+            </style>
         </section>
 
         <section id="contact">
