@@ -626,8 +626,7 @@
                     </a>
                 </div>
 
-                <div class="social-links-wrapper"
-                    style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <div class="social-links-wrapper">
                     <a href="https://www.instagram.com/sunterrace.co/" target="_blank" class="common-btn social-btn">
                         <span class="icon">Instagram</span>
                     </a>
@@ -683,11 +682,24 @@
                     font-weight: bold;
                 }
 
+                /* 下段：SNSボタンの親要素 */
+                .social-links-wrapper {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    max-width: 400px;
+                    /* メインボタンと同じ幅に合わせる */
+                    margin: 0 auto;
+                }
+
                 /* 下段：SNSボタン */
                 .social-btn {
-                    padding: 12px 20px;
-                    width: 190px;
-                    /* 2つ並べた時にちょうど良い幅 */
+                    padding: 12px 5px;
+                    width: auto;
+                    flex: 1;
+                    /* 親要素の幅に合わせて均等に広げる */
                     font-size: 14px;
                     background-color: var(--primary-color);
                     border-color: var(--primary-color);
