@@ -18,7 +18,9 @@
     <meta name="google-site-verification" content="rPFMWFB5IsSiZGiqudXGKuYD643kK_n1pscOHDPycOk" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
         :root {
@@ -31,16 +33,50 @@
             --line-color: #E5E5E5;
         }
 
+        /* サイト全体のタイポグラフィとカラー設定 */
         body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            /* 英語はInter、日本語はNoto Sans JPを優先 */
+            color: #333333;
+            /* JSON定義：textMain */
+            background-color: #FFFFFF;
+            /* JSON定義：bgMain */
+            line-height: 1.8;
+            /* 行間を広げて風通しを良くする */
+            letter-spacing: 0.04em;
+            /* 文字間を少し開けてモダンな印象に */
+            -webkit-font-smoothing: antialiased;
+            /* 文字の輪郭を滑らかに（Mac/iOS向け） */
             margin: 0;
-            font-family: var(--font-main);
-            color: var(--main-text-color);
+            padding: 0;
             min-height: 100vh;
             overflow-x: hidden;
             width: 100%;
             display: flex;
             flex-direction: column;
             position: relative;
+        }
+
+        /* 見出しのスタイル調整 */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 600;
+            /* InterとNoto Sansの太字を使用 */
+            color: #333333;
+            line-height: 1.4;
+            letter-spacing: 0.05em;
+        }
+
+        /* サブテキスト・補足説明のスタイル */
+        .section-subtitle,
+        .text-muted {
+            color: #888888;
+            /* JSON定義：textMuted */
+            font-size: 0.95rem;
         }
 
         /* ヘッダーの固定とミニマルデザインの適用 */
