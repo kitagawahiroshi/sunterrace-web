@@ -758,8 +758,8 @@
                     display: flex !important;
                     justify-content: center !important;
                     align-items: center !important;
-                    gap: 40px !important;
-                    /* アイコン同士の間隔を上品な広さに固定 */
+                    gap: clamp(24px, 6vw, 60px) !important;
+                    /* アイコン同士の間隔を画面幅に合わせて可変（最小24px〜最大60px） */
                     margin-top: 30px !important;
                     padding: 0 !important;
                     flex-wrap: nowrap !important;
@@ -810,10 +810,7 @@
 
                 /* スマホ対応 */
                 @media (max-width: 768px) {
-                    .social-links-wrapper {
-                        gap: 30px !important;
-                        /* スマホ画面では間隔を少しだけ狭める */
-                    }
+                    /* gapの設定はclampで自動調整されるため、ここでは上書きしない */
 
                     .main-btn {
                         width: 100%;
