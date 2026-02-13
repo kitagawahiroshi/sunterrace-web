@@ -368,6 +368,38 @@
 
         /* スマホ対応 */
         @media (max-width: 768px) {
+
+            /* ヘッダー全体の上下余白を最小限にする */
+            header {
+                padding: 10px 0 !important;
+            }
+
+            /* ロゴ画像をコンパクトにする */
+            .centered-logo-container .header-favicon,
+            .centered-logo-container .main-logo {
+                max-height: 40px !important;
+                width: auto;
+                margin-bottom: 5px !important;
+            }
+
+            /* ナビゲーションリンクを横一列に並べ、文字を小さくする */
+            .main-nav {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center;
+                gap: 15px;
+                /* リンク同士の隙間を適度に詰める */
+                margin: 0;
+                padding: 0;
+            }
+
+            .main-nav a {
+                font-size: 13px !important;
+                /* スマホ用に文字サイズを調整 */
+                padding: 5px 0;
+                margin: 0;
+            }
+
             .common-btn {
                 width: 100%;
                 max-width: 300px;
@@ -384,35 +416,10 @@
                 display: block;
             }
 
-            /* Mobile Layout Fixes */
-            .main-nav {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .main-nav a {
-                padding: 6px 6px;
-                margin: 0 4px;
-                font-size: 0.85rem;
-            }
-
             .centered-logo-container .logo-container {
                 padding: 0 10px;
                 max-width: 100%;
                 box-sizing: border-box;
-            }
-
-            .centered-logo-container .header-favicon {
-                width: 60px;
-                /* Smaller favicon for mobile */
-                height: auto;
-            }
-
-            .centered-logo-container .main-logo {
-                width: 200px;
-                /* Smaller logo for mobile */
-                height: auto;
-                max-width: 100%;
             }
 
             .hero-section h1 {
