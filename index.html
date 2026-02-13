@@ -755,49 +755,69 @@
 
                 /* 下段：SNSボタンの親要素 */
                 .social-links-wrapper {
-                    display: flex;
-                    justify-content: center;
-                    gap: 20px;
-                    margin-top: 20px;
+                    display: flex !important;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    gap: 40px !important;
+                    /* アイコン同士の間隔を上品な広さに固定 */
+                    margin-top: 30px !important;
+                    padding: 0 !important;
+                    flex-wrap: nowrap !important;
+                    /* 勝手に折り返さないようにする */
                 }
 
                 /* 下段：SNSボタン（アイコンのみ） */
                 .social-btn {
-                    padding: 0;
-                    width: 48px;
-                    height: 48px;
-                    min-width: 0;
-                    font-size: 14px;
-                    background-color: transparent;
-                    /* 背景なし */
-                    border: none;
-                    /* 枠線なし */
-                    color: var(--primary-color) !important;
-                    /* アイコン色 */
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 44px;
+                    /* スマホで指で押しやすい最小サイズを確保 */
+                    height: 44px;
+                    min-width: 0 !important;
+                    color: #333333 !important;
+                    /* Sunterrace Standardの墨色 */
+                    font-size: 22px !important;
+                    /* アイコンの大きさを統一 */
+                    text-decoration: none !important;
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    opacity: 0.7;
+                    /* 通常時は少しだけ色を落として控えめに */
+                    background: transparent !important;
+                    /* 以前のボタン背景を完全に消去 */
+                    border: none !important;
+                    /* 以前のボタン枠線を完全に消去 */
+                    box-shadow: none !important;
                     flex: none;
+                    padding: 0;
                 }
 
-                /* SNSボタンのホバー色調整 */
+                /* SVG自体のサイズ調整（フォントサイズ指定だけでは効かない場合のため） */
+                .social-btn svg {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                /* ホバー時の美しいインタラクション */
                 .social-btn:hover {
-                    opacity: 0.7;
-                    /* ホバー時に少し薄くする */
-                    background-color: transparent;
-                    color: var(--primary-color) !important;
-                    transform: translateY(-2px);
-                    /* 少し浮き上がるアクション */
+                    opacity: 1;
+                    /* マウスを乗せるとくっきり黒になる */
+                    transform: translateY(-3px);
+                    /* ほんの少しだけ上にフワッと浮く */
+                    background-color: transparent !important;
+                    color: #333333 !important;
                 }
 
                 /* スマホ対応 */
-                @media (max-width: 480px) {
+                @media (max-width: 768px) {
+                    .social-links-wrapper {
+                        gap: 30px !important;
+                        /* スマホ画面では間隔を少しだけ狭める */
+                    }
+
                     .main-btn {
                         width: 100%;
                         padding: 18px 20px;
-                    }
-
-                    /* スマホでもボタンサイズは維持 */
-                    .social-btn {
-                        width: 44px;
-                        height: 44px;
                     }
 
                     /* 幅を均等に */
