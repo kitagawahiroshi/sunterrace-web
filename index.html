@@ -23,6 +23,29 @@
         rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* --- 1. 横揺れ（横スクロール）完全防止の絶対ルール --- */
+        html,
+        body {
+            overflow-x: hidden;
+            /* 横方向のはみ出しを強制的に隠し、スクロールを無効化 */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- 2. 要素の幅計算を統一し、はみ出しを根本から防ぐ --- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* --- 3. 画像が画面幅を突き破るのを防ぐ --- */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         :root {
             --font-main: 'Inter', sans-serif;
             --bg-color: #FFFFFF;
