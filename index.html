@@ -528,21 +528,56 @@
 
                 <div class="projects-grid">
                     <div class="project-card">
-                        <h3 class="project-name">Sunterrace.supply</h3>
+                        <h3 class="project-name">
+                            <span class="project-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </span>
+                            Sunterrace.supply
+                        </h3>
                         <p class="project-desc">
                             サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。
                         </p>
                     </div>
 
                     <div class="project-card">
-                        <h3 class="project-name">Sunterrace.ai</h3>
+                        <h3 class="project-name">
+                            <span class="project-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                    <line x1="12" x2="12" y1="19" y2="22" />
+                                    <line x1="8" x2="16" y1="22" y2="22" />
+                                </svg>
+                            </span>
+                            Sunterrace.ai
+                        </h3>
                         <p class="project-desc">
                             AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。
                         </p>
                     </div>
 
                     <div class="project-card">
-                        <h3 class="project-name">Sunterrace.btc</h3>
+                        <h3 class="project-name">
+                            <span class="project-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.215-6.893m-1.215 6.893-3.94-.694m5.155-6.2L8.279 5.307m2.145-1.172L9.963 2.518m-5.45 6.42.348-1.97m7.796 3.012c4.372 1.638 3.518 7.025-1.563 8.864m-4.669-7.142 4.669.822M6.635 13.633l4.669.822" />
+                                </svg>
+                            </span>
+                            Sunterrace.btc
+                        </h3>
                         <p class="project-desc">
                             ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。
                         </p>
@@ -590,9 +625,23 @@
                     font-weight: 600;
                     margin-bottom: 20px;
                     border-bottom: 2px solid #333333;
-                    display: inline-block;
+                    margin-bottom: 20px;
+                    border-bottom: 2px solid #333333;
+                    /* display: inline-block; */
+                    /* Flexboxに変更するためコメントアウトまたは削除 */
+                    display: inline-flex;
+                    /* 変更: Flexboxでアイコンとテキストを横並び */
+                    align-items: center;
+                    /* 変更: 垂直方向中央揃え */
                     padding-bottom: 8px;
                     letter-spacing: 0.02em;
+                }
+
+                .project-icon {
+                    display: inline-flex;
+                    align-items: center;
+                    margin-right: 10px;
+                    /* テキストとの間隔 */
                 }
 
                 /* プロジェクト説明文 */
