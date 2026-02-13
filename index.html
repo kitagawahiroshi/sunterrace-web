@@ -697,9 +697,8 @@
                 /* 下段：SNSボタン */
                 .social-btn {
                     padding: 12px 5px;
-                    width: auto;
-                    flex: 1;
-                    /* 親要素の幅に合わせて均等に広げる */
+                    flex: 0 0 30%;
+                    /* 3つ並べた時にちょうど良い幅 (Total ~30% each) */
                     font-size: 14px;
                     background-color: var(--primary-color);
                     border-color: var(--primary-color);
@@ -724,8 +723,8 @@
 
                     /* スマホでも横並び維持 */
                     .social-btn {
-                        flex: 1;
-                        width: auto;
+                        width: 30%;
+                        /* スマホでも幅を統一 */
                         padding: 12px 5px;
                         font-size: 13px;
                     }
