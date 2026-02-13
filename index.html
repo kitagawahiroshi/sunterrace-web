@@ -16,12 +16,25 @@
     <title>サンテラス商会 | Sunterrace & Co.</title>
     <meta name="description" content="福岡・今宿エリアを拠点とする『サンテラス商会』の公式サイトです。地域コミュニティと共に、暮らしとビジネスに新しい価値を創造します。">
     <meta name="google-site-verification" content="rPFMWFB5IsSiZGiqudXGKuYD643kK_n1pscOHDPycOk" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        :root {
+            --font-main: 'Inter', sans-serif;
+            --bg-color: #FFFFFF;
+            --card-bg-color: #F9F9F9;
+            --main-text-color: #333333;
+            --sub-text-color: #888888;
+            --primary-color: #333333;
+            --line-color: #E5E5E5;
+        }
+
         body {
             margin: 0;
-            font-family: sans-serif;
-            color: #333;
+            font-family: var(--font-main);
+            color: var(--main-text-color);
             min-height: 100vh;
             overflow-x: hidden;
             width: 100%;
@@ -169,6 +182,14 @@
             border-bottom: none;
         }
 
+        .project-card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--line-color);
+            border-radius: 0;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
         .main-content h2,
         .main-content h3 {
             color: #333;
@@ -250,24 +271,24 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-color: #444444;
-            /* 統一されたダークグレー */
+            background-color: var(--primary-color);
             color: #ffffff !important;
             text-decoration: none !important;
-            border-radius: 4px;
+            border-radius: 0;
             font-size: 15px;
             font-weight: 500;
             letter-spacing: 0.05em;
             transition: all 0.3s ease;
-            border: 1px solid #444444;
+            border: 1px solid var(--primary-color);
             cursor: pointer;
+            box-shadow: none;
         }
 
         /* ホバー時の共通動作 */
         .common-btn:hover {
             background-color: transparent;
-            color: #444444 !important;
-            transform: translateY(-2px);
+            color: var(--primary-color) !important;
+            transform: translateY(0);
         }
 
         /* お問い合わせボタン（メイン） */
@@ -285,14 +306,13 @@
             padding: 12px 30px;
             font-size: 14px;
             min-width: 140px;
-            background-color: #444444;
-            /* メインと同じ色に統一 */
-            border-color: #444444;
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
         }
 
         /* SNSボタンのホバー */
         .social-btn:hover {
-            color: #444444 !important;
+            color: var(--primary-color) !important;
         }
 
         /* スマホ対応 */
@@ -426,18 +446,23 @@
         <section id="projects">
             <h2>Projects</h2>
 
+            <div class="project-card">
+                <h3>Sunterrace.supply</h3>
+                <p>サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。
+                </p>
+            </div>
 
-            <h3>Sunterrace.supply</h3>
-            <p>サンテラスから生まれるモノ・コト・サービスを集約するプラットフォームです。直近ではコーヒーブランドSunterrace.coffeeの展開を予定しており、今後はさらに多様な商品やサービスをラインナップに加えていく予定です。日々の生活に彩りを添える、厳選されたアイテムをお届けします。
-            </p>
+            <div class="project-card">
+                <h3>Sunterrace.ai</h3>
+                <p>AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。
+                </p>
+            </div>
 
-            <h3>Sunterrace.ai</h3>
-            <p>AIの力を活用し、日本の不動産管理が抱える課題に対するユニークなアプローチを提供するプロジェクトです。書類のデジタル化、設備データの監視、清掃・点検スケジュールの最適化、そして長期修繕計画の提案まで、AIが不動産管理のあらゆる側面を支援し、居住者の心地よい暮らしと資産価値の向上に貢献します。
-            </p>
-
-            <h3>Sunterrace.btc</h3>
-            <p>ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。
-            </p>
+            <div class="project-card">
+                <h3>Sunterrace.btc</h3>
+                <p>ビットコインを活用した、ユニークなコミュニティ金融プロジェクトです。Sunterrace.supplyでのビットコイン決済導入、コミュニティメンバーへのビットコイン付与を通じて、新たな資産保全の形を提案します。また、ビットコインを通じた地域貢献・連携など、新しい経済圏の創出を目指します。
+                </p>
+            </div>
         </section>
 
         <section id="contact">
@@ -473,27 +498,26 @@
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #444444;
-                    /* 統一されたダークグレー */
+                    background-color: var(--primary-color);
                     color: #ffffff !important;
                     text-decoration: none !important;
-                    border-radius: 4px;
+                    border-radius: 0;
                     font-size: 15px;
                     font-weight: 500;
                     letter-spacing: 0.05em;
                     transition: all 0.3s ease;
-                    border: 1px solid #444444;
+                    border: 1px solid var(--primary-color);
                     cursor: pointer;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    box-shadow: none;
                     box-sizing: border-box;
                 }
 
                 /* ホバー時の共通動作 */
                 .common-btn:hover {
                     background-color: transparent;
-                    color: #444444 !important;
-                    transform: translateY(-2px);
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                    color: var(--primary-color) !important;
+                    transform: translateY(0);
+                    box-shadow: none;
                 }
 
                 /* 上段：メインボタン */
@@ -515,14 +539,13 @@
                     width: 190px;
                     /* 2つ並べた時にちょうど良い幅 */
                     font-size: 14px;
-                    background-color: #666666;
-                    /* 少し明るめにして階層をつける */
-                    border-color: #666666;
+                    background-color: var(--primary-color);
+                    border-color: var(--primary-color);
                 }
 
                 /* SNSボタンのホバー色調整 */
                 .social-btn:hover {
-                    color: #666666 !important;
+                    color: var(--primary-color) !important;
                 }
 
                 /* スマホ対応 */
