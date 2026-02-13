@@ -43,6 +43,21 @@
             position: relative;
         }
 
+        /* ヘッダーの固定とミニマルデザインの適用 */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #FFFFFF;
+            /* スクロール時に下のコンテンツを隠す純白背景 */
+            z-index: 1000;
+            /* サイト内で常に最前面に表示 */
+            border-bottom: 1px solid #E5E5E5;
+            /* 影(shadow)は使わず、1pxのラインでスマートに区切る */
+            padding: 15px 0;
+            /* 上下の余白を少し持たせてスッキリさせる */
+            width: 100%;
+        }
+
         /* Centered Logo Container */
         .centered-logo-container {
             text-align: center;
@@ -414,20 +429,22 @@
 </head>
 
 <body>
-    <div class="centered-logo-container">
-        <a href="#" class="logo-link">
-            <div class="logo-container">
-                <img src="images/favicon.png" alt="Favicon" class="header-favicon">
-                <img src="images/sunterrace_logo.png" alt="Sunterrace Logo" class="main-logo">
-            </div>
-        </a>
-    </div>
+    <header>
+        <div class="centered-logo-container">
+            <a href="#" class="logo-link">
+                <div class="logo-container">
+                    <img src="images/favicon.png" alt="Favicon" class="header-favicon">
+                    <img src="images/sunterrace_logo.png" alt="Sunterrace Logo" class="main-logo">
+                </div>
+            </a>
+        </div>
 
-    <nav class="main-nav">
-        <a href="#profile">Sunterrace & Co.</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <nav class="main-nav">
+            <a href="#profile">Sunterrace & Co.</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
     <div class="hero-section">
         <h1></h1>
