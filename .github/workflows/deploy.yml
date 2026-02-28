@@ -13,6 +13,11 @@ jobs:
       - name: Get latest code
         uses: actions/checkout@v4
 
+      - name: Update sitemap lastmod
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          sed -i "s|<lastmod>.*</lastmod>|<lastmod>${TODAY}</lastmod>|g" sitemap.xml
+
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -20,5 +25,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ./sunterrace.co/
-          protocol: ftp
+          protocol: ftps
           port: 21
