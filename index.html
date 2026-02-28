@@ -15,6 +15,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>サンテラス商会 | Sunterrace & Co.</title>
     <meta name="description" content="福岡・今宿エリアを拠点とする『サンテラス商会』の公式サイトです。地域コミュニティと共に、暮らしとビジネスに新しい価値を創造します。">
+    <link rel="canonical" href="https://sunterrace.co/">
+    <!-- OGP -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="サンテラス商会 | Sunterrace & Co.">
+    <meta property="og:description" content="福岡・今宿エリアを拠点とする『サンテラス商会』の公式サイトです。地域コミュニティと共に、暮らしとビジネスに新しい価値を創造します。">
+    <meta property="og:url" content="https://sunterrace.co/">
+    <meta property="og:image" content="https://sunterrace.co/images/ogp.jpg">
+    <meta property="og:site_name" content="サンテラス商会">
+    <meta property="og:locale" content="ja_JP">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="サンテラス商会 | Sunterrace & Co.">
+    <meta name="twitter:description" content="福岡・今宿エリアを拠点とする『サンテラス商会』の公式サイトです。地域コミュニティと共に、暮らしとビジネスに新しい価値を創造します。">
+    <meta name="twitter:image" content="https://sunterrace.co/images/ogp.jpg">
     <meta name="google-site-verification" content="rPFMWFB5IsSiZGiqudXGKuYD643kK_n1pscOHDPycOk" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +47,6 @@
       ],
       "@id": "https://sunterrace.co",
       "url": "https://sunterrace.co",
-      "telephone": "+81-92-000-0000",
       "priceRange": "要相談",
       "address": {
         "@type": "PostalAddress",
@@ -79,7 +92,7 @@
     </header>
 
     <div class="hero-section">
-        <h1></h1>
+        <h1 class="visually-hidden">サンテラス商会 — コミュニティと共鳴し、新たな価値を創造する</h1>
         <p>
             <span class="ib-text">コミュニティと共鳴し、</span>
             <span class="ib-text">新たな価値を創造する。</span>
@@ -96,8 +109,8 @@
         </section>
 
         <section id="projects">
-            <div class="container" style="text-align: center; padding: 80px 20px; max-width: 1000px; margin: 0 auto;">
-                <h2 class="section-title" style="margin-bottom: 50px;">Projects</h2>
+            <div class="projects-container">
+                <h2 class="section-title">Projects</h2>
 
                 <div class="projects-grid">
                     <div class="project-card">
@@ -168,13 +181,13 @@
         </section>
 
         <section id="contact">
-            <div class="container" style="text-align: center; padding: 80px 20px;">
-                <h2 class="section-title" style="margin-bottom: 10px;">Contact</h2>
-                <p class="section-subtitle" style="margin-bottom: 40px; color: #666;">
+            <div class="contact-container">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">
                     お仕事のご依頼・ご相談など、<br class="sp-only">お気軽にお問い合わせください。
                 </p>
 
-                <div class="contact-btn-wrapper" style="margin-bottom: 20px;">
+                <div class="contact-btn-wrapper">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUPrHYC-hzxf1hM1npHCHpmMY9sBotEhtqfejAuUpQAEqang/viewform"
                         target="_blank" class="common-btn main-btn">
                         お問い合わせフォームへ
@@ -224,7 +237,7 @@
         <p>©︎ 2026 Sunterrace & Co.</p>
     </footer>
 
-    <a href="#" id="back-to-top">↑</a>
+    <a href="#" id="back-to-top" aria-label="ページトップへ戻る">↑</a>
 
     <script>
         window.addEventListener('scroll', function () {

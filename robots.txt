@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sunterrace.co/sitemap.xml
