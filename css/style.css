@@ -177,7 +177,7 @@ header {
     /* Fallback */
     min-height: 100svh;
     /* Stable mobile height */
-    background-image: url('../images/main_background.JPG');
+    background-image: url('../images/main_background.webp');
     /* Path fixed for css folder */
     background-size: cover;
     background-position: center center;
@@ -260,9 +260,9 @@ header {
 }
 
 section {
-    margin-bottom: 40px;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--line-color);
 }
 
 section:last-child {
@@ -384,15 +384,17 @@ footer .footer-nav a:hover {
     background-color: var(--card-bg-color);
     border: 1px solid var(--line-color);
     border-radius: 0;
-    box-shadow: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     padding: 40px 30px;
     text-align: left;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     margin-bottom: 0;
 }
 
 .project-card:hover {
     border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
 }
 
 /* プロジェクト名（見出し） */
@@ -504,16 +506,16 @@ footer .footer-nav a:hover {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 15px;
-        /* リンク同士の隙間を適度に詰める */
+        gap: 24px;
+        /* リンク同士の隙間をタップしやすく広げる */
         margin: 0;
-        padding: 0;
+        padding: 8px 0;
     }
 
     .main-nav a {
-        font-size: 13px;
-        /* スマホ用に文字サイズを調整 */
-        padding: 5px 0;
+        font-size: 14px;
+        /* スマホ用にタッチ領域を確保 */
+        padding: 8px 4px;
         margin: 0;
     }
 
@@ -566,4 +568,17 @@ footer .footer-nav a:hover {
         margin: 0;
         flex: none;
     }
+}
+
+/* --- Scroll Fade-in Animation --- */
+html.js .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+html.js .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
